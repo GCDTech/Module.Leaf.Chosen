@@ -1,0 +1,24 @@
+{
+  "name": "rhubarbphp/module-leaf-chosen",
+  "description": "Dropdowns and selections from the Chosen library",
+  "keywords": [
+    "leaf",
+    "mvp",
+    "chosen",
+    "rhubarb",
+    "php",
+    "framework",
+    "harvest"
+  ],
+  "homepage": "http://www.rhubarbphp.com/",
+  "license": "Apache-2.0",
+  "autoload": {
+    "psr-4": {
+      "Rhubarb\\Leaf\\Chosen\\": "src/"
+    }
+  },
+  "require": {
+    "rhubarbphp/module-leaf": "^1.1.2"
+    "rhubarbphp/module-leaf-common-controls"
+  }
+}
