@@ -6,8 +6,12 @@ use Rhubarb\Leaf\Controls\Common\SelectionControls\DropDown\DropDownView;
 
 class ChosenDropdownView extends DropDownView
 {
-    protected function printViewContent()
+    public function getDeploymentPackage()
     {
-        parent::printViewContent();
+        $package = parent::getDeploymentPackage();
+        $package->resourcesToDeploy[] = __DIR__ .'/../../vendor/components/jquery/jquery.min.js';
+        $package->resourcesToDeploy[] = __DIR__ .'/../chosen.jquery.min.js';
+        $package->resourcesToDeploy[] = __DIR__ . '/ChosenDropDownViewBridge.js';
+        return $package;
     }
 }
