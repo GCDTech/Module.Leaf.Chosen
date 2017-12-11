@@ -19,6 +19,6 @@
   },
   "require": {
     "rhubarbphp/module-leaf": "^1.1.2",
-    "rhubarbphp/module-leaf-common-controls"
+    "rhubarbphp/module-leaf-common-controls": "^1.0.0"
   }
 }
