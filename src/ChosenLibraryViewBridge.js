@@ -1,7 +1,8 @@
 rhubarb.vb.create('ChosenLibraryViewBridge', function() {
     return {
+        chosen:null,
         attachEvents:function() {
-            $(this.viewNode).chosen();
+            this.chosen = $(this.viewNode).chosen();
         }
     };
 });

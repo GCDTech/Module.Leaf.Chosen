@@ -2,10 +2,8 @@
 
 namespace Rhubarb\Leaf\Chosen\ChosenMultiSelect;
 
-use Rhubarb\Leaf\Chosen\ChosenLibraryTrait;
-use Rhubarb\Leaf\Controls\Common\SelectionControls\DropDown\DropDownView;
+use Rhubarb\Leaf\Chosen\ChosenDropdown\ChosenDropdownView;
 
-class ChosenMultiSelectView extends DropDownView
+class ChosenMultiSelectView extends ChosenDropdownView
 {
-    use ChosenLibraryTrait;
 }
