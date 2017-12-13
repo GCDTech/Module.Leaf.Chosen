@@ -1,5 +1,5 @@
 {
-  "name": "rhubarbphp/module-leaf-chosen",
+  "name": "gcdtech/module-leaf-chosen",
   "description": "Dropdowns and selections from the Chosen library",
   "keywords": [
     "leaf",
@@ -10,7 +10,7 @@
     "framework",
     "harvest"
   ],
-  "homepage": "http://www.rhubarbphp.com/",
+  "homepage": "https://github.com/GCDTech/Module.Leaf.Chosen",
   "license": "Apache-2.0",
   "autoload": {
     "psr-4": {
