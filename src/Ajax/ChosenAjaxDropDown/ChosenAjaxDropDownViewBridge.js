@@ -1,4 +1,4 @@
-rhubarb.vb.create('ChosenAjaxMultiSelectViewBridge', function(parent) {
+rhubarb.vb.create('ChosenAjaxDropDownViewBridge', function(parent) {
     return {
         attachEvents: function() {
             var self = this;

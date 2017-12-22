@@ -1,13 +1,13 @@
 <?php
 
-namespace Rhubarb\Leaf\Chosen\ChosenAjaxMultiSelect;
+namespace Rhubarb\Leaf\Chosen\Ajax\ChosenAjaxDropDown;
 
 use Rhubarb\Crown\Events\Event;
-use Rhubarb\Leaf\Chosen\ChosenMultiSelect\ChosenMultiSelect;
+use Rhubarb\Leaf\Chosen\ChosenDropdown\ChosenDropdown;
 
-class ChosenAjaxMultiSelect extends ChosenMultiSelect
+class ChosenAjaxDropDown extends ChosenDropdown
 {
-    /** @var ChosenAjaxMultiSelectModel $model */
+    /** @var ChosenAjaxDropDownModel $model */
     protected $model;
 
     /** @var Event $searchedEvent */
@@ -22,12 +22,12 @@ class ChosenAjaxMultiSelect extends ChosenMultiSelect
 
     protected function getViewClass()
     {
-        return ChosenAjaxMultiSelectView::class;
+        return ChosenAjaxDropDownView::class;
     }
 
     protected function createModel()
     {
-        return new ChosenAjaxMultiSelectModel();
+        return new ChosenAjaxDropDownModel();
     }
 
     protected function onModelCreated()
