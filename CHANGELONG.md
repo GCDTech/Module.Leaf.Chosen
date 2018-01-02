@@ -1,5 +1,8 @@
 #Changelog
 
+### 1.1.0
+    * Using Selectize for better ajax searchable inputs
+    
 ### 1.0.0
     * Refactored the Single select and multi select dropdowns
 

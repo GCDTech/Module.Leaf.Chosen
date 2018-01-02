@@ -1,11 +1,11 @@
 <?php
 
-namespace Rhubarb\Leaf\Chosen\Ajax\ChosenAjaxDropDown;
+namespace Rhubarb\Leaf\Selectize\Ajax\SelectizeAjaxDropDown;
 
 use Rhubarb\Crown\Events\Event;
 use Rhubarb\Leaf\Controls\Common\SelectionControls\SelectionControlModel;
 
-class ChosenAjaxDropDownModel extends SelectionControlModel
+class SelectizeAjaxDropDownModel extends SelectionControlModel
 {
     public $searchedEvent;
 

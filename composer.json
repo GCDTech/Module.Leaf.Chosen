@@ -1,20 +1,20 @@
 {
-  "name": "gcdtech/module-leaf-chosen",
-  "description": "Dropdowns and selections from the Chosen library",
+  "name": "gcdtech/module-leaf-selectize",
+  "description": "Dropdowns and selections from the Selectize library",
   "keywords": [
     "leaf",
     "mvp",
-    "chosen",
+    "selectize",
     "rhubarb",
     "php",
     "framework",
     "harvest"
   ],
-  "homepage": "https://github.com/GCDTech/Module.Leaf.Chosen",
+  "homepage": "https://github.com/GCDTech/Module.Leaf.Selectize",
   "license": "Apache-2.0",
   "autoload": {
     "psr-4": {
-      "Rhubarb\\Leaf\\Chosen\\": "src/"
+      "Rhubarb\\Leaf\\Selectize\\": "src/"
     }
   },
   "require": {

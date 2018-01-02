@@ -1,1 +1,1 @@
-Module.Leaf.Chosen
+Module.Leaf.Selectize

@@ -1,10 +1,10 @@
 <?php
 
-namespace Rhubarb\Leaf\Chosen\Ajax\ChosenAjaxMultiSelect;
+namespace Rhubarb\Leaf\Selectize\Ajax\SelectizeAjaxMultiSelect;
 
-use Rhubarb\Leaf\Chosen\Ajax\ChosenAjaxDropDown\ChosenAjaxDropDown;
+use Rhubarb\Leaf\Selectize\Ajax\SelectizeAjaxDropDown\SelectizeAjaxDropDown;
 
-class ChosenAjaxMultiSelect extends ChosenAjaxDropDown
+class SelectizeAjaxMultiSelect extends SelectizeAjaxDropDown
 {
     protected function supportsMultipleSelection()
     {

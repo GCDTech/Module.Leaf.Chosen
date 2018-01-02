@@ -1,15 +1,15 @@
 <?php
-namespace Rhubarb\Leaf\Chosen;
+namespace Rhubarb\Leaf\Selectize;
 
-trait ChosenLibraryTrait
+trait SelectizeLibraryTrait
 {
     public function getDeploymentPackage()
     {
         $package = parent::getDeploymentPackage();
         $package->resourcesToDeploy[] = VENDOR_DIR .'/components/jquery/jquery.min.js';
-        $package->resourcesToDeploy[] = __DIR__ . '/Resources/chosen.jquery.min.js';
-        $package->resourcesToDeploy[] = __DIR__ . '/Resources/chosen.min.css';
-        $package->resourcesToDeploy[] = __DIR__ . '/ChosenLibraryViewBridge.js';
+        $package->resourcesToDeploy[] = __DIR__ . '/Resources/selectize.min.js';
+        $package->resourcesToDeploy[] = __DIR__ . '/Resources/selectize.css';
+        $package->resourcesToDeploy[] = __DIR__ . '/SelectizeLibraryViewBridge.js';
 
         if ($childViewBridge = $this->getViewBridgePath()) {
             $package->resourcesToDeploy[] = $childViewBridge;
@@ -20,7 +20,7 @@ trait ChosenLibraryTrait
 
     protected function getViewBridgeName()
     {
-        return 'ChosenLibraryViewBridge';
+        return 'SelectizeLibraryViewBridge';
     }
 
     public function getViewBridgePath()
