@@ -1,5 +1,8 @@
 #Changelog
 
+### 1.0.0
+    * Refactored the Single select and multi select dropdowns
+
 ### 0.0.3
     * Added Multi Select, with Ajax Dropdown
 
