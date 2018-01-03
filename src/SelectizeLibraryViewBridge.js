@@ -8,7 +8,7 @@ rhubarb.vb.create('SelectizeLibraryViewBridge', function(parent) {
                 $selectize = $(this.viewNode).selectize(
                     {
                         options:[],
-                        create:[],
+                        create:false,
                         load: function (query, callback) {
                             this.clearOptions();
                             this.renderCache = {};
