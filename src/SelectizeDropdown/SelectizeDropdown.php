@@ -10,4 +10,16 @@ class SelectizeDropdown extends DropDown
     {
         return SelectizeDropdownView::class;
     }
+
+    protected function onModelCreated()
+    {
+        parent::onModelCreated();
+
+        $this->setPlaceholderText('Please Select');
+    }
+
+    public function setPlaceholderText($placeholderText)
+    {
+        $this->model->addHtmlAttribute("data-placeholder", $placeholderText);
+    }
 }

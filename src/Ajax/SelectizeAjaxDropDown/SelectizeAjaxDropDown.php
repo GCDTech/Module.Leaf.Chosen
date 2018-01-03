@@ -38,4 +38,8 @@ class SelectizeAjaxDropDown extends SelectizeDropdown
             return $this->searchedEvent->raise($searchQuery);
         });
     }
+
+    public function setSelectionItems(array $items)
+    {
+    }
 }
