@@ -1,6 +1,9 @@
 #Changelog
 
-### 1.1.0
+### 2.0.1
+    * Fix for selected value not being respected 
+
+### 2.0.0
     * Using Selectize for better ajax searchable inputs
     
 ### 1.0.0
