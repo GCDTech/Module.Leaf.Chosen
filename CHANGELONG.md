@@ -1,5 +1,8 @@
 #Changelog
 
+### 2.0.2
+    * Disable "Add new..." by default for dropdowns
+
 ### 2.0.1
     * Fix for selected value not being respected 
 
