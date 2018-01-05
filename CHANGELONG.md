@@ -1,5 +1,8 @@
 #Changelog
 
+### 2.0.3
+    * Fix multiselect dropdown get value 
+    
 ### 2.0.2
     * Disable "Add new..." by default for dropdowns
 
