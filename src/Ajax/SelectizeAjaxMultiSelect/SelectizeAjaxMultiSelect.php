@@ -22,7 +22,11 @@ class SelectizeAjaxMultiSelect extends SelectizeAjaxDropDown
     {
         $value = $this->model->value;
         if (!is_array($value)) {
-            $value = [$value];
+            if ($this->model->value) {
+                $value = [$value];
+            } else {
+                $value = [];
+            }
         }
 
         return $value;
