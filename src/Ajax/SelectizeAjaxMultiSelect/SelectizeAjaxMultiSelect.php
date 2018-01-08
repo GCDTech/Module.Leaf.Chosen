@@ -17,4 +17,14 @@ class SelectizeAjaxMultiSelect extends SelectizeAjaxDropDown
 
         $this->model->addHtmlAttribute("multiple", "multiple");
     }
+
+    public function getValue()
+    {
+        $value = $this->model->value;
+        if (!is_array($value)) {
+            $value = [$value];
+        }
+
+        return $value;
+    }
 }
