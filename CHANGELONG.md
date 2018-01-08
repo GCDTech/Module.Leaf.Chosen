@@ -1,7 +1,11 @@
 #Changelog
 
+### 2.0.5
+    * Fix arraying an empty value from multiselect inputs
+
 ### 2.0.4
     * Fix get value returning signle value for multiselect dropdowns
+    
 ### 2.0.3
     * Fix multiselect dropdown get value 
     
