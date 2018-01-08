@@ -10,4 +10,14 @@ class SelectizeMultiSelect extends MultiSelect
     {
         return SelectizeMultiSelectView::class;
     }
+
+    public function getValue()
+    {
+        $value = $this->model->value;
+        if (!is_array($value)) {
+            $value = [$value];
+        }
+
+        return $value;
+    }
 }
