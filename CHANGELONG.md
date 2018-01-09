@@ -1,5 +1,8 @@
 #Changelog
 
+### 2.0.6
+    * Fix Selectize value not being updated when setValue is called for a viewbridge
+
 ### 2.0.5
     * Fix arraying an empty value from multiselect inputs
 
