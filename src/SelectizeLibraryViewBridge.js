@@ -36,8 +36,6 @@ rhubarb.vb.create('SelectizeLibraryViewBridge', function (parent) {
             this.selectize.onSearchChange('uniqueSearchQueryOrElseCacheWillBeUsed');
         },
         getValue: function () {
-            // If the control only supports a single selection then just return
-            // the first of the selected items (or false if none selected)
             if (!this.supportsMultipleSelection) {
                 return parent.getValue.call(this);
             }
@@ -54,11 +52,9 @@ rhubarb.vb.create('SelectizeLibraryViewBridge', function (parent) {
         reloadSelectize: function () {
             var self = this;
 
-            // Get the Selectize instance
-            var selectize = this.selectize;
-            selectize.clear();
-            selectize.clearOptions();
-            selectize.load(function(callback) {
+            this.selectize.clear();
+            this.selectize.clearOptions();
+            this.selectize.load(function(callback) {
                 callback(self.originalValues);
             })
         }
