@@ -1,6 +1,7 @@
 rhubarb.vb.create('SelectizeLibraryViewBridge', function (parent) {
     return {
         selectize: null,
+        originalValues:{},
         attachEvents: function () {
             parent.attachEvents.call(this);
 
@@ -9,24 +10,25 @@ rhubarb.vb.create('SelectizeLibraryViewBridge', function (parent) {
                     {
                         options: [],
                         create: false,
-                        load: function (query, callback) {
-                            this.clearOptions();
-                            this.renderCache = {};
-                        },
                         loadThrottle: 150,
                         labelField: 'name',
                         searchField: 'name',
                         allowEmptyOption: true,
-                        plugins: ['remove_button']
+                        plugins: ['remove_button'],
+                        onChange:function(value) {
+                            self.setValue(value, true);
+                        }
                     }
                 );
 
             this.selectize = $selectize[0].selectize;
-        },
-        populateSelectedItemsFromDom: function () {
-            parent.populateSelectedItemsFromDom.call(this);
 
-            this.setValue(this.selectize.getValue());
+            var options = [];
+            for (var op in this.selectize.options) {
+                options.push({name:this.selectize.options[op].name, value:op});
+            }
+
+            this.originalValues = options;
         },
         onReattached: function () {
             parent.onReattached.call(this);
@@ -42,6 +44,23 @@ rhubarb.vb.create('SelectizeLibraryViewBridge', function (parent) {
             else {
                 return this.selectize.getValue();
             }
+        },
+        setValue: function (value, preventSelectizeReload) {
+            parent.setValue.call(this, value);
+            if (!preventSelectizeReload) {
+                this.reloadSelectize();
+            }
+        },
+        reloadSelectize: function () {
+            var self = this;
+
+            // Get the Selectize instance
+            var selectize = this.selectize;
+            selectize.clear();
+            selectize.clearOptions();
+            selectize.load(function(callback) {
+                callback(self.originalValues);
+            })
         }
     };
 }, window.rhubarb.viewBridgeClasses.DropDownViewBridge);
