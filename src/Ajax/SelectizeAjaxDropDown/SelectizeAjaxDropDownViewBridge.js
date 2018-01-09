@@ -22,6 +22,13 @@ rhubarb.vb.create('SelectizeAjaxDropDownViewBridge', function(parent) {
                     self.currentRequest = null;
                 });
             };
+        },
+        reloadSelectize: function () {
+            var selectize = this.selectize;
+            selectize.clearOptions();
+            selectize.load(function (callback) {
+                callback([]);
+            });
         }
     };
 }, window.rhubarb.viewBridgeClasses.SelectizeLibraryViewBridge);
