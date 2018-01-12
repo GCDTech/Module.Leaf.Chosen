@@ -1,5 +1,8 @@
 #Changelog
 
+### 2.0.7
+    * Make sure Value changed is triggerd, and getValue works the same for Single, and Multiselects
+
 ### 2.0.6
     * Fix Selectize value not being updated when setValue is called for a viewbridge
 
