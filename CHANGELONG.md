@@ -1,5 +1,8 @@
 #Changelog
 
+### 2.0.8
+    * Setting the value of viewnode with jquery
+
 ### 2.0.7
     * Make sure Value changed is triggerd, and getValue works the same for Single, and Multiselects
 
