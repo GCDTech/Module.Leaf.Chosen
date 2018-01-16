@@ -43,6 +43,8 @@ rhubarb.vb.create('SelectizeLibraryViewBridge', function (parent) {
             if (!preventSelectizeReload) {
                 this.reloadSelectize();
             }
+            $(this.viewNode).val(value);
+
             this.valueChanged();
         },
         reloadSelectize: function () {

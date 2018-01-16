@@ -16,6 +16,7 @@ class SelectizeAjaxMultiSelect extends SelectizeAjaxDropDown
         parent::onModelCreated();
 
         $this->model->addHtmlAttribute("multiple", "multiple");
+        $this->model->supportsMultipleSelection = true;
     }
 
     public function getValue()

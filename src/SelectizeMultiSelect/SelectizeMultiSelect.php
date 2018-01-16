@@ -11,6 +11,13 @@ class SelectizeMultiSelect extends MultiSelect
         return SelectizeMultiSelectView::class;
     }
 
+    protected function onModelCreated()
+    {
+        parent::onModelCreated();
+
+        $this->model->supportsMultipleSelection = true;
+    }
+
     public function getValue()
     {
         $value = $this->model->value;
