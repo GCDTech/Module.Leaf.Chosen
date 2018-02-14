@@ -1,6 +1,11 @@
 #Changelog
 
+### 2.0.9
+
+Fixed:   Rerendering the select with new options now works
+
 ### 2.0.8
+
     * Setting the value of viewnode with jquery
 
 ### 2.0.7

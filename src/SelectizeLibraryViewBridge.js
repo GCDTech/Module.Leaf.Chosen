@@ -5,6 +5,9 @@ rhubarb.vb.create('SelectizeLibraryViewBridge', function (parent) {
         attachEvents: function () {
             parent.attachEvents.call(this);
 
+            this.initialiseSelectize();
+        },
+        initialiseSelectize: function(){
             var self = this,
                 $selectize = $(this.viewNode).selectize(
                     {
@@ -31,8 +34,10 @@ rhubarb.vb.create('SelectizeLibraryViewBridge', function (parent) {
             this.originalValues = options;
         },
         onReattached: function () {
+
             parent.onReattached.call(this);
 
+            this.reloadSelectize();
             this.selectize.onSearchChange('uniqueSearchQueryOrElseCacheWillBeUsed');
         },
         getValue: function () {
@@ -48,13 +53,20 @@ rhubarb.vb.create('SelectizeLibraryViewBridge', function (parent) {
             this.valueChanged();
         },
         reloadSelectize: function () {
-            var self = this;
+
+            var options = [];
+
+            for( var i = 0; i < this.viewNode.options.length; i++ ) {
+                options.push({name: this.viewNode.options[i].text, value: this.viewNode.options[i].value});
+            }
 
             this.selectize.clear();
             this.selectize.clearOptions();
-            this.selectize.load(function(callback) {
-                callback(self.originalValues);
-            })
+            this.selectize.load(function(options, callback) {
+
+                callback(options);
+
+            }.bind(this, options))
         }
     };
 }, window.rhubarb.viewBridgeClasses.DropDownViewBridge);
