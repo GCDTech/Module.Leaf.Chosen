@@ -37,13 +37,14 @@ rhubarb.vb.create('SelectizeLibraryViewBridge', function (parent) {
 
             parent.onReattached.call(this);
 
-            this.reloadSelectize();
+            this.refreshSelectize();
             this.selectize.onSearchChange('uniqueSearchQueryOrElseCacheWillBeUsed');
         },
         getValue: function () {
             return this.selectize.getValue();
         },
         setValue: function (value, preventSelectizeReload) {
+            debugger
             parent.setValue.call(this, value);
             if (!preventSelectizeReload) {
                 this.reloadSelectize();
@@ -53,6 +54,15 @@ rhubarb.vb.create('SelectizeLibraryViewBridge', function (parent) {
             this.valueChanged();
         },
         reloadSelectize: function () {
+            var self = this;
+
+            this.selectize.clear();
+            this.selectize.clearOptions();
+            this.selectize.load(function (callback) {
+                callback(self.originalValues);
+            })
+        },
+        refreshSelectize: function () {
 
             var options = [];
 
