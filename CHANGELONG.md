@@ -1,5 +1,8 @@
 #Changelog
 
+### 2.0.10
+Fixed: Rerendering now works independently from reloading as this was causing other issues
+
 ### 2.0.9
 
 Fixed:   Rerendering the select with new options now works
