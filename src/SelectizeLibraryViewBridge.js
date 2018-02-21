@@ -44,7 +44,6 @@ rhubarb.vb.create('SelectizeLibraryViewBridge', function (parent) {
             return this.selectize.getValue();
         },
         setValue: function (value, preventSelectizeReload) {
-            debugger
             parent.setValue.call(this, value);
             if (!preventSelectizeReload) {
                 this.reloadSelectize();
