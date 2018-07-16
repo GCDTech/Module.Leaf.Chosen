@@ -1,5 +1,8 @@
 #Changelog
 
+### 2.0.11
+Added: add/remove js-processing to viewnode before/after raise server event for SelectizeAjaxDropDown
+
 ### 2.0.10
 Fixed: Rerendering now works independently from reloading as this was causing other issues
 
