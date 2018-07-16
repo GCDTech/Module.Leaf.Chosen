@@ -12,9 +12,9 @@ rhubarb.vb.create('SelectizeAjaxDropDownViewBridge', function(parent) {
                     self.currentRequest.abort();
                 }
 
-                this.viewNode.classList.add('js-processing');
+                self.viewNode.classList.add('js-processing');
                 self.currentRequest = self.raiseServerEvent('searched', input, function (response) {
-                    this.viewNode.classList.remove('js-processing');
+                    self.viewNode.classList.remove('js-processing');
                     if (response && response instanceof Array && response.length) {
                         callback(response);
                     } else {
