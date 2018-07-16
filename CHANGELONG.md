@@ -1,5 +1,8 @@
 #Changelog
 
+### 2.0.13
+Fixed: use self instead of this
+
 ### 2.0.12
 Added: add/remove js-processing to viewnode before/after raise server event for SelectizeAjaxDropDown
 
