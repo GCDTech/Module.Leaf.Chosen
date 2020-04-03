@@ -2,9 +2,9 @@
 
 namespace Rhubarb\Leaf\Selectize\SelectizeMultiSelect;
 
-use Rhubarb\Leaf\Controls\Common\SelectionControls\MultiSelect\MultiSelect;
+use Rhubarb\Leaf\Controls\Common\SelectionControls\MultiSelect\MultiSelectDropDown;
 
-class SelectizeMultiSelect extends MultiSelect
+class SelectizeMultiSelect extends MultiSelectDropDown
 {
     protected function getViewClass()
     {
