@@ -1,5 +1,8 @@
 #Changelog
 
+### 2.0.14
+Fixed: Update Leaf and update SelectizeMultiSelect to use new base class
+
 ### 2.0.13
 Fixed: use self instead of this
 
